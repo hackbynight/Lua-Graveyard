@@ -7366,7 +7366,7 @@ end
 </details>
 
 <details>
-  <summary>Guts and Randoms to go through (1-8)</summary>
+  <summary>Fresh Config - (1-8)</summary>
   
   See included files.
   
