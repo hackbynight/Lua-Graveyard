@@ -4141,7 +4141,7 @@ if svo.systemloaded then svo.loader.action() end
   
 </details>
 
-----------------      END OF CORE      -----------------
+------------------- END OF CORE      --------------------
 
 <details>
   <summary>Initialization on Boot</summary>
