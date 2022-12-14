@@ -18,7 +18,7 @@ A few LUA scripts used with MUDLET to share with friends.
       if rurl == url then display(r) else return true end
     end, true)
 
-  local url = "https://discordapp.com/api/webhooks/[put yours"
+  local url = "https://discordapp.com/api/webhooks/yourapigoeshere"
   local data = {
     username = discord_username, 
     avatar_url = avatarurl,
@@ -46,7 +46,7 @@ end
       -- if rurl == url then display(r) else return true end
     -- end, true)
 -- 
-  -- local url = "https://discordapp.com/api/webhooks/975391849319641161/xVtJk-By84k1Tm9yR3Or8bdMepMInRSufOuVlkxcByX_IEK7rPHvjClFa0zMArSAah7j"
+  -- local url = "https://discordapp.com/api/webhooks/yourapigoeshere"
   -- local data = {
     -- username = discord_username, 
     -- avatar_url = avatarurl,
@@ -7366,7 +7366,7 @@ end
 </details>
 
 <details>
-  <summary>Defiler Function Collection (1-8)</summary>
+  <summary>Guts and Randoms to go through (1-8)</summary>
   
   See included files.
   
