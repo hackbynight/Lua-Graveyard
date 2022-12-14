@@ -1,5 +1,4 @@
-# eleusian-artificial-intelligence
-A few LUA scripts used with MUDLET to share with friends. 
+# A few LUA scripts used with MUDLET to share with friends. 
 
 <details>
   <summary>Discord Web Hook</summary>
