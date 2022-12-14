@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>zData</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>(zBash)</name>
+				<script>if matches[3] then
+  zData.db.showData(matches[2], matches[3])
+elseif matches[2] then
+  zData.db.showData(matches[2])
+else
+  zData.db.showData()
+end</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^zbash(?: (\w+))?(?: (\w+))?$</regex>
+			</Alias>
+		</AliasGroup>
+	</AliasPackage>
+</MudletPackage>
