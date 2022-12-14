@@ -4480,2320 +4480,6 @@ snapnamelist = {
 </details>
 
 <details>
-  <summary>Summoner Function "Creator"</summary>
-  
-  ```lua
-  function Noctu(type)
-	if type == "impatience" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceduplicate" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " duplicate")
-		end	
-	elseif type == "impatienceduplicatepyradius" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor quicken at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
---		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon quicken at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon quicken at " .. target.name .. " confusion duplicate")
-		else
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceblast" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " blast")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name.. " blast")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " blast")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " stupidity blast")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism blast")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity blast")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism blast")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion blast")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " blast")
-		end	
-	elseif type == "impatiencestrengthen" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " strengthen")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " strenghten")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
---		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " heroism strengthen")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism strengthen")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion strengthen")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " strengthen")
-		end	
-	elseif type == "vertigo" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name .. " strengthen")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon disorient at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name)
-		end	
-	elseif type == "epilepsy" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon flash at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name)
-		end	
-	elseif type == "epilepsyduplicate" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon flash at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " confusion duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name .. " duplicate")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulwrackduplicate" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " confusion duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name .. " duplicate")
-		end	
-	elseif type == "vertigointensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon disorient at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinationsintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("nocadmus")
-			send("fling justice fever at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("nocadmus")
-			send("fling hierophant fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("nocadmus")
-			send("fling emperor fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("nocadmus")
-			send("fling justice fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " confusion intensify")
-		else
-			Unleash("nocadmus")
-			send("fling creator fever at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinations" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("nocadmus")
-			send("fling justice fever at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("nocadmus")
-			send("fling hierophant fever at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("nocadmus")
-			send("fling emperor fever at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("nocadmus")
---			send("fling moon fever at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("nocadmus")
-			send("fling justice fever at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " confusion")
-		else
-			Unleash("nocadmus")
-			send("fling creator fever at " .. target.name)
-		end	
-	elseif type == "deafintensify" then
-		if (not table.contains(target.afflictions, "justice")) then
-			send("fling justice nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor nervewrack at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			send("fling justice nervewrack at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon nervewrack at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon nervewrack at " .. target.name .. " confusion intensify")
-		else
-			send("fling creator neverwrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deafintensifycreator" then
-		if (not table.contains(target.afflictions, "justice")) then
-			send("fling justice nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor nervewrack at " .. target.name.. " intensify")
-		else
-			send("fling creator nervewrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deaf" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice nervewrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nervewrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor nervewrack at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon nervewrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice nervewrack at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator nervewrack at " .. target.name)
-		end	
-	elseif type == "heave" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor heave at " .. target.name.. " intensify")
-			Unleash("heave")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon heave at " .. target.name .. " stupidity intensify")
---			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon heave at " .. target.name .. " heroism intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			send("fling justice heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon heave at " .. target.name .. " stupidity intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon heave at " .. target.name .. " masochism intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon heave at " .. target.name .. " confusion intensify")
-			Unleash("heave")
-		else
-			send("fling creator quicken at " .. target.name .. " intensify")
-			Unleash("heave")
-		end	
-	elseif type == "heaveho" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice heave at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant heave at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")		
-			send("fling emperor heave at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon heave at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice heave at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator heave at " .. target.name)
-		end	
-	elseif type == "soulburn" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice soulburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor soulburn at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon soulburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice soulburn at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator soulburn at " .. target.name)
-		end	
-	elseif type == "healthleech" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon dehydrate at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name)
-		end	
-	elseif type == "healthleechintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name .. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-  			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-  			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name .. " intensify")
-		end	
-	elseif type == "nerveburn" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon nerveburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name)
-		end	
-	elseif type == "nerveburnintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name .. " intensify")
-		end	
-	elseif type == "asthma" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice combustion at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant combustion at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor combustion at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon combustion at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice combustion at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon combustino at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator combustion at " .. target.name .. " intensify")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor soulwrack at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			send("fling justice soulwrack at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon soulwrack at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon soulwrack at " .. target.name .. " confusion")
-		else
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulburnblast" then
-		send("invoke soulburn " .. target.name .. " blast")
-	end
-end
-
-function Creator(type)
-	if type == "impatience" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceduplicate" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " duplicate")
-		end	
-	elseif type == "impatienceduplicatepyradius" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		else
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceblast" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " blast")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name.. " blast")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " blast")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " blast")
-		end	
-	elseif type == "impatiencestrengthen" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " strengthen")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " strenghten")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism strengthen")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " strengthen")
-		end	
-	elseif type == "vertigo" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism")
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name)
-		end	
-	elseif type == "epilepsy" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name)
-		end	
-	elseif type == "epilepsyduplicate" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name .. " duplicate")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulwrackduplicate" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name .. " duplicate")
-		end	
-	elseif type == "vertigointensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinationsintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice fever at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon fever at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator fever at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinations" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice fever at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant fever at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor fever at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon fever at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator fever at " .. target.name)
-		end	
-	elseif type == "deafintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor nervewrack at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
-		else
-			send("fling creator neverwrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deafintensifycreator" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor nervewrack at " .. target.name.. " intensify")
-		else
-			send("fling creator nervewrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deaf" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice nervewrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nervewrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor nervewrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator nervewrack at " .. target.name)
-		end	
-	elseif type == "heave" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor heave at " .. target.name.. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon heave at " .. target.name .. " heroism intensify")
-			Unleash("heave")
-		else
-			send("fling creator quicken at " .. target.name .. " intensify")
-			Unleash("heave")
-		end	
-	elseif type == "heaveho" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice heave at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant heave at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")		
-			send("fling emperor heave at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator heave at " .. target.name)
-		end	
-	elseif type == "soulburn" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice soulburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor soulburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator soulburn at " .. target.name)
-		end	
-	elseif type == "healthleech" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name)
-		end	
-	elseif type == "healthleechintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-  			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name .. " intensify")
-		end	
-	elseif type == "nerveburn" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name)
-		end	
-	elseif type == "nerveburnintensify" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name .. " intensify")
-		end	
-	elseif type == "asthma" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			Unleash("affliction")
-			send("fling justice combustion at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant combustion at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			Unleash("affliction")
-			send("fling emperor combustion at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator combustion at " .. target.name .. " intensify")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "justice"))  then
-			send("fling justice soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "numbness")) then		
-			send("fling emperor soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		else
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulburnblast" then
-		send("invoke soulburn " .. target.name .. " blast")
-	end
-end
-  ```
-  
-</details>
-
-<details>
-  <summary>Summoner Function "Heroism"</summary>
-    
-  ```lua
-  function Noctu(type)
-	if type == "impatience" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceduplicate" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " duplicate")
-		end	
-	elseif type == "impatienceduplicatepyradius" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice quicken at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
---		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon quicken at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon quicken at " .. target.name .. " confusion duplicate")
-		else
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceblast" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " blast")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name.. " blast")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " blast")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " stupidity blast")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism blast")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity blast")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism blast")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion blast")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " blast")
-		end	
-	elseif type == "impatiencestrengthen" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " strengthen")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " strenghten")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
---		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
---			Unleash("affliction")
---			send("fling moon quicken at " .. target.name .. " heroism strengthen")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " masochism strengthen")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " confusion strengthen")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " strengthen")
-		end	
-	elseif type == "vertigo" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name .. " strengthen")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon disorient at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name)
-		end	
-	elseif type == "epilepsy" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon flash at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name)
-		end	
-	elseif type == "epilepsyduplicate" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon flash at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " confusion duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name .. " duplicate")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulwrackduplicate" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name .. " duplicate")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name .. " heroism duplicate")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " masochism duplicate")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " confusion duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name .. " duplicate")
-		end	
-	elseif type == "vertigointensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon disorient at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinationsintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("nocadmus")
-			send("fling emperor fever at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("nocadmus")
-			send("fling hierophant fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("nocadmus")
-			send("fling justice fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("nocadmus")
-			send("fling emperor fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " confusion intensify")
-		else
-			Unleash("nocadmus")
-			send("fling creator fever at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinations" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("nocadmus")
-			send("fling emperor fever at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("nocadmus")
-			send("fling hierophant fever at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("nocadmus")
-			send("fling justice fever at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("nocadmus")
---			send("fling moon fever at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("nocadmus")
-			send("fling emperor fever at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("nocadmus")
-			send("fling moon fever at " .. target.name .. " confusion")
-		else
-			Unleash("nocadmus")
-			send("fling creator fever at " .. target.name)
-		end	
-	elseif type == "deafintensify" then
-		if (not table.contains(target.afflictions, "numbness")) then
-			send("fling emperor nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice nervewrack at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			send("fling emperor nervewrack at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon nervewrack at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon nervewrack at " .. target.name .. " confusion intensify")
-		else
-			send("fling creator neverwrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deafintensifycreator" then
-		if (not table.contains(target.afflictions, "numbness")) then
-			send("fling emperor nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice nervewrack at " .. target.name.. " intensify")
-		else
-			send("fling creator nervewrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deaf" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor nervewrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nervewrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice nervewrack at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon nervewrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor nervewrack at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator nervewrack at " .. target.name)
-		end	
-	elseif type == "heave" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice heave at " .. target.name.. " intensify")
-			Unleash("heave")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon heave at " .. target.name .. " stupidity intensify")
---			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon heave at " .. target.name .. " heroism intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			send("fling emperor heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon heave at " .. target.name .. " stupidity intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon heave at " .. target.name .. " masochism intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon heave at " .. target.name .. " confusion intensify")
-			Unleash("heave")
-		else
-			send("fling creator quicken at " .. target.name .. " intensify")
-			Unleash("heave")
-		end	
-	elseif type == "heaveho" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor heave at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant heave at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")		
-			send("fling justice heave at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon heave at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor heave at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator heave at " .. target.name)
-		end	
-	elseif type == "soulburn" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor soulburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice soulburn at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon soulburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor soulburn at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator soulburn at " .. target.name)
-		end	
-	elseif type == "healthleech" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon dehydrate at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name)
-		end	
-	elseif type == "healthleechintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name .. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-  			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-  			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name .. " intensify")
-		end	
-	elseif type == "nerveburn" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon nerveburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " confusion")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name)
-		end	
-	elseif type == "nerveburnintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name .. " intensify")
-		end	
-	elseif type == "asthma" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor combustion at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant combustion at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice combustion at " .. target.name.. " intensify")
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			Unleash("affliction")
---			send("fling moon combustion at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " heroism intensify")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			Unleash("affliction")
-			send("fling emperor combustion at " .. target.name .. " intensify")
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " stupidity intensify")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " masochism intensify")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			Unleash("affliction")
-			send("fling moon combustino at " .. target.name .. " confusion intensify")
-		else
-			Unleash("affliction")
-			send("fling creator combustion at " .. target.name .. " intensify")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice soulwrack at " .. target.name)
---		elseif (not table.contains(target.mentalaffs, "stupidity")) then
---			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		elseif (not table.contains(target.afflictions, "numbness")) then
-			send("fling emperor soulwrack at " .. target.name)
-		elseif (not table.contains(target.mentalaffs, "stupidity")) then
-			send("fling moon soulwrack at " .. target.name .. " stupidity")
-		elseif (not table.contains(target.mentalaffs, "masochism")) then
-			send("fling moon soulwrack at " .. target.name .. " masochism")
-		elseif (not table.contains(target.mentalaffs, "confusion")) then
-			send("fling moon soulwrack at " .. target.name .. " confusion")
-		else
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulburnblast" then
-		send("invoke soulburn " .. target.name .. " blast")
-	end
-end
-
-function Creator(type)
-	if type == "impatience" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceduplicate" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " duplicate")
-		end	
-	elseif type == "impatienceduplicatepyradius" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor quicken at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice quicken at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon quicken at " .. target.name .. " heroism duplicate")
-		else
-			send("fling creator quicken at " .. target.name)
-		end	
-	elseif type == "impatienceblast" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " blast")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name.. " blast")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " blast")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " blast")
-		end	
-	elseif type == "impatiencestrengthen" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor quicken at " .. target.name .. " strengthen")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant quicken at " .. target.name .. " strenghten")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice quicken at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon quicken at " .. target.name .. " heroism strengthen")
-		else
-			Unleash("affliction")
-			send("fling creator quicken at " .. target.name .. " strengthen")
-		end	
-	elseif type == "vertigo" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name .. " strengthen")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism")
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name)
-		end	
-	elseif type == "epilepsy" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name)
-		end	
-	elseif type == "epilepsyduplicate" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor flash at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice flash at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon flash at " .. target.name .. " heroism duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator flash at " .. target.name .. " duplicate")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulwrackduplicate" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor soulwrack at " .. target.name .. " duplicate")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice soulwrack at " .. target.name .. " duplicate")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
-		else
-			Unleash("affliction")
-			send("fling creator soulwrack at " .. target.name .. " duplicate")
-		end	
-	elseif type == "vertigointensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor disorient at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant disorient at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice disorient at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon disorient at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator disorient at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinationsintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor fever at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice fever at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon fever at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator fever at " .. target.name .. " intensify")
-		end	
-	elseif type == "hallucinations" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor fever at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant fever at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice fever at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon fever at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator fever at " .. target.name)
-		end	
-	elseif type == "deafintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice nervewrack at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
-		else
-			send("fling creator neverwrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deafintensifycreator" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor nervewrack at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant nervewrack at " .. target.name .." intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice nervewrack at " .. target.name.. " intensify")
-		else
-			send("fling creator nervewrack at " .. target.name .. " intensify")
-		end	
-	elseif type == "deaf" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor nervewrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nervewrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice nervewrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nervewrack at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator nervewrack at " .. target.name)
-		end	
-	elseif type == "heave" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant heave at " .. target.name .. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice heave at " .. target.name.. " intensify")
-			Unleash("heave")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon heave at " .. target.name .. " heroism intensify")
-			Unleash("heave")
-		else
-			send("fling creator quicken at " .. target.name .. " intensify")
-			Unleash("heave")
-		end	
-	elseif type == "heaveho" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor heave at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant heave at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")		
-			send("fling justice heave at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon heave at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator heave at " .. target.name)
-		end	
-	elseif type == "soulburn" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor soulburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant soulburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then
-			Unleash("affliction")
-			send("fling justice soulburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon soulburn at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator soulburn at " .. target.name)
-		end	
-	elseif type == "healthleech" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name)
-		end	
-	elseif type == "healthleechintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor dehydrate at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice dehydrate at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-  			Unleash("affliction")
-			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator dehydrate at " .. target.name .. " intensify")
-		end	
-	elseif type == "nerveburn" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name)
-		end	
-	elseif type == "nerveburnintensify" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor nerveburn at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant nerveburn at " .. target.name .. " intensify")
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice nerveburn at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator nerveburn at " .. target.name .. " intensify")
-		end	
-	elseif type == "asthma" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			Unleash("affliction")
-			send("fling emperor combustion at " .. target.name .. " intensify")
-		elseif target.hierophant == false and hierophantmode == true then		
-			Unleash("affliction")
-			send("fling hierophant combustion at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			Unleash("affliction")
-			send("fling justice combustion at " .. target.name.. " intensify")
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			Unleash("affliction")
-			send("fling moon combustion at " .. target.name .. " heroism intensify")
-		else
-			Unleash("affliction")
-			send("fling creator combustion at " .. target.name .. " intensify")
-		end	
-	elseif type == "soulwrack" then
-		if (not table.contains(target.afflictions, "numbness"))  then
-			send("fling emperor soulwrack at " .. target.name)
-		elseif target.hierophant == false and hierophantmode == true then		
-			send("fling hierophant soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "justice")) then		
-			send("fling justice soulwrack at " .. target.name)
-		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
-			send("fling moon soulwrack at " .. target.name .. " heroism")
-		else
-			send("fling creator soulwrack at " .. target.name)
-		end	
-	elseif type == "soulburnblast" then
-		send("invoke soulburn " .. target.name .. " blast")
-	end
-end
-  ```
-  
-</details>
-
-<details>
   <summary>Affliction Handling</summary>
   
   Guard handling a separate function
@@ -8210,6 +5896,2321 @@ $r @tar" "@pick(t,defilerQ) with thornroot</value>
 		tempTimer( i+0.5, function() unHighlightRoom( room ) end )
 	end
 	tempTimer( durationn + 1, function() unHighlightRoom( room ) end )
+end
+  ```
+  
+</details>
+
+
+<details>
+  <summary>Creator</summary>
+  
+  ```lua
+  function Noctu(type)
+	if type == "impatience" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceduplicate" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " duplicate")
+		end	
+	elseif type == "impatienceduplicatepyradius" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+--		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon quicken at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon quicken at " .. target.name .. " confusion duplicate")
+		else
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceblast" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " blast")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name.. " blast")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " blast")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " stupidity blast")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism blast")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity blast")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism blast")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion blast")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " blast")
+		end	
+	elseif type == "impatiencestrengthen" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " strengthen")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " strenghten")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
+--		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " heroism strengthen")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism strengthen")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion strengthen")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " strengthen")
+		end	
+	elseif type == "vertigo" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name .. " strengthen")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon disorient at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name)
+		end	
+	elseif type == "epilepsy" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon flash at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name)
+		end	
+	elseif type == "epilepsyduplicate" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon flash at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " confusion duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name .. " duplicate")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulwrackduplicate" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " confusion duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name .. " duplicate")
+		end	
+	elseif type == "vertigointensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon disorient at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinationsintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("nocadmus")
+			send("fling justice fever at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("nocadmus")
+			send("fling hierophant fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("nocadmus")
+			send("fling emperor fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("nocadmus")
+			send("fling justice fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " confusion intensify")
+		else
+			Unleash("nocadmus")
+			send("fling creator fever at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinations" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("nocadmus")
+			send("fling justice fever at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("nocadmus")
+			send("fling hierophant fever at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("nocadmus")
+			send("fling emperor fever at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("nocadmus")
+--			send("fling moon fever at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("nocadmus")
+			send("fling justice fever at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " confusion")
+		else
+			Unleash("nocadmus")
+			send("fling creator fever at " .. target.name)
+		end	
+	elseif type == "deafintensify" then
+		if (not table.contains(target.afflictions, "justice")) then
+			send("fling justice nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor nervewrack at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			send("fling justice nervewrack at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon nervewrack at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon nervewrack at " .. target.name .. " confusion intensify")
+		else
+			send("fling creator neverwrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deafintensifycreator" then
+		if (not table.contains(target.afflictions, "justice")) then
+			send("fling justice nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor nervewrack at " .. target.name.. " intensify")
+		else
+			send("fling creator nervewrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deaf" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice nervewrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nervewrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor nervewrack at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon nervewrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice nervewrack at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator nervewrack at " .. target.name)
+		end	
+	elseif type == "heave" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor heave at " .. target.name.. " intensify")
+			Unleash("heave")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon heave at " .. target.name .. " stupidity intensify")
+--			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon heave at " .. target.name .. " heroism intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			send("fling justice heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon heave at " .. target.name .. " stupidity intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon heave at " .. target.name .. " masochism intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon heave at " .. target.name .. " confusion intensify")
+			Unleash("heave")
+		else
+			send("fling creator quicken at " .. target.name .. " intensify")
+			Unleash("heave")
+		end	
+	elseif type == "heaveho" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice heave at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant heave at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")		
+			send("fling emperor heave at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon heave at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice heave at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator heave at " .. target.name)
+		end	
+	elseif type == "soulburn" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice soulburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor soulburn at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon soulburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice soulburn at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator soulburn at " .. target.name)
+		end	
+	elseif type == "healthleech" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon dehydrate at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name)
+		end	
+	elseif type == "healthleechintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name .. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+  			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+  			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name .. " intensify")
+		end	
+	elseif type == "nerveburn" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon nerveburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name)
+		end	
+	elseif type == "nerveburnintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name .. " intensify")
+		end	
+	elseif type == "asthma" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice combustion at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant combustion at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor combustion at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon combustion at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice combustion at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon combustino at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator combustion at " .. target.name .. " intensify")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor soulwrack at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			send("fling justice soulwrack at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon soulwrack at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon soulwrack at " .. target.name .. " confusion")
+		else
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulburnblast" then
+		send("invoke soulburn " .. target.name .. " blast")
+	end
+end
+
+function Creator(type)
+	if type == "impatience" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceduplicate" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " duplicate")
+		end	
+	elseif type == "impatienceduplicatepyradius" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		else
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceblast" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " blast")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name.. " blast")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " blast")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " blast")
+		end	
+	elseif type == "impatiencestrengthen" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " strengthen")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " strenghten")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism strengthen")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " strengthen")
+		end	
+	elseif type == "vertigo" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism")
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name)
+		end	
+	elseif type == "epilepsy" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name)
+		end	
+	elseif type == "epilepsyduplicate" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name .. " duplicate")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulwrackduplicate" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name .. " duplicate")
+		end	
+	elseif type == "vertigointensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinationsintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice fever at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon fever at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator fever at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinations" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice fever at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant fever at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor fever at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon fever at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator fever at " .. target.name)
+		end	
+	elseif type == "deafintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor nervewrack at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
+		else
+			send("fling creator neverwrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deafintensifycreator" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor nervewrack at " .. target.name.. " intensify")
+		else
+			send("fling creator nervewrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deaf" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice nervewrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nervewrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor nervewrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator nervewrack at " .. target.name)
+		end	
+	elseif type == "heave" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor heave at " .. target.name.. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon heave at " .. target.name .. " heroism intensify")
+			Unleash("heave")
+		else
+			send("fling creator quicken at " .. target.name .. " intensify")
+			Unleash("heave")
+		end	
+	elseif type == "heaveho" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice heave at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant heave at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")		
+			send("fling emperor heave at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator heave at " .. target.name)
+		end	
+	elseif type == "soulburn" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice soulburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor soulburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator soulburn at " .. target.name)
+		end	
+	elseif type == "healthleech" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name)
+		end	
+	elseif type == "healthleechintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+  			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name .. " intensify")
+		end	
+	elseif type == "nerveburn" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name)
+		end	
+	elseif type == "nerveburnintensify" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name .. " intensify")
+		end	
+	elseif type == "asthma" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			Unleash("affliction")
+			send("fling justice combustion at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant combustion at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			Unleash("affliction")
+			send("fling emperor combustion at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator combustion at " .. target.name .. " intensify")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "justice"))  then
+			send("fling justice soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "numbness")) then		
+			send("fling emperor soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		else
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulburnblast" then
+		send("invoke soulburn " .. target.name .. " blast")
+	end
+end
+  ```
+  
+</details>
+
+<details>
+  <summary>Heroism</summary>
+    
+  ```lua
+  function Noctu(type)
+	if type == "impatience" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceduplicate" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " duplicate")
+		end	
+	elseif type == "impatienceduplicatepyradius" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice quicken at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+--		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon quicken at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon quicken at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon quicken at " .. target.name .. " confusion duplicate")
+		else
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceblast" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " blast")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name.. " blast")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " blast")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " stupidity blast")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism blast")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity blast")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism blast")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion blast")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " blast")
+		end	
+	elseif type == "impatiencestrengthen" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " strengthen")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " strenghten")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
+--		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+--			Unleash("affliction")
+--			send("fling moon quicken at " .. target.name .. " heroism strengthen")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " stupidity strengthen")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " masochism strengthen")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " confusion strengthen")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " strengthen")
+		end	
+	elseif type == "vertigo" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name .. " strengthen")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon disorient at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name)
+		end	
+	elseif type == "epilepsy" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon flash at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name)
+		end	
+	elseif type == "epilepsyduplicate" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon flash at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " confusion duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name .. " duplicate")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulwrackduplicate" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name .. " duplicate")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name .. " heroism duplicate")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " stupidity duplicate")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " masochism duplicate")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " confusion duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name .. " duplicate")
+		end	
+	elseif type == "vertigointensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon disorient at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinationsintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("nocadmus")
+			send("fling emperor fever at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("nocadmus")
+			send("fling hierophant fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("nocadmus")
+			send("fling justice fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("nocadmus")
+			send("fling emperor fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " confusion intensify")
+		else
+			Unleash("nocadmus")
+			send("fling creator fever at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinations" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("nocadmus")
+			send("fling emperor fever at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("nocadmus")
+			send("fling hierophant fever at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("nocadmus")
+			send("fling justice fever at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("nocadmus")
+--			send("fling moon fever at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("nocadmus")
+			send("fling emperor fever at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("nocadmus")
+			send("fling moon fever at " .. target.name .. " confusion")
+		else
+			Unleash("nocadmus")
+			send("fling creator fever at " .. target.name)
+		end	
+	elseif type == "deafintensify" then
+		if (not table.contains(target.afflictions, "numbness")) then
+			send("fling emperor nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice nervewrack at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			send("fling emperor nervewrack at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon nervewrack at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon nervewrack at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon nervewrack at " .. target.name .. " confusion intensify")
+		else
+			send("fling creator neverwrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deafintensifycreator" then
+		if (not table.contains(target.afflictions, "numbness")) then
+			send("fling emperor nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice nervewrack at " .. target.name.. " intensify")
+		else
+			send("fling creator nervewrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deaf" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor nervewrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nervewrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice nervewrack at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon nervewrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor nervewrack at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator nervewrack at " .. target.name)
+		end	
+	elseif type == "heave" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice heave at " .. target.name.. " intensify")
+			Unleash("heave")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon heave at " .. target.name .. " stupidity intensify")
+--			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon heave at " .. target.name .. " heroism intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			send("fling emperor heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon heave at " .. target.name .. " stupidity intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon heave at " .. target.name .. " masochism intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon heave at " .. target.name .. " confusion intensify")
+			Unleash("heave")
+		else
+			send("fling creator quicken at " .. target.name .. " intensify")
+			Unleash("heave")
+		end	
+	elseif type == "heaveho" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor heave at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant heave at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")		
+			send("fling justice heave at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon heave at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor heave at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator heave at " .. target.name)
+		end	
+	elseif type == "soulburn" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor soulburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice soulburn at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon soulburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor soulburn at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator soulburn at " .. target.name)
+		end	
+	elseif type == "healthleech" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon dehydrate at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name)
+		end	
+	elseif type == "healthleechintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name .. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+  			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+  			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name .. " intensify")
+		end	
+	elseif type == "nerveburn" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon nerveburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " confusion")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name)
+		end	
+	elseif type == "nerveburnintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name .. " intensify")
+		end	
+	elseif type == "asthma" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor combustion at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant combustion at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice combustion at " .. target.name.. " intensify")
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			Unleash("affliction")
+--			send("fling moon combustion at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " heroism intensify")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			Unleash("affliction")
+			send("fling emperor combustion at " .. target.name .. " intensify")
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " stupidity intensify")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " masochism intensify")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			Unleash("affliction")
+			send("fling moon combustino at " .. target.name .. " confusion intensify")
+		else
+			Unleash("affliction")
+			send("fling creator combustion at " .. target.name .. " intensify")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice soulwrack at " .. target.name)
+--		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+--			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		elseif (not table.contains(target.afflictions, "numbness")) then
+			send("fling emperor soulwrack at " .. target.name)
+		elseif (not table.contains(target.mentalaffs, "stupidity")) then
+			send("fling moon soulwrack at " .. target.name .. " stupidity")
+		elseif (not table.contains(target.mentalaffs, "masochism")) then
+			send("fling moon soulwrack at " .. target.name .. " masochism")
+		elseif (not table.contains(target.mentalaffs, "confusion")) then
+			send("fling moon soulwrack at " .. target.name .. " confusion")
+		else
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulburnblast" then
+		send("invoke soulburn " .. target.name .. " blast")
+	end
+end
+
+function Creator(type)
+	if type == "impatience" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceduplicate" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " duplicate")
+		end	
+	elseif type == "impatienceduplicatepyradius" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor quicken at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice quicken at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon quicken at " .. target.name .. " heroism duplicate")
+		else
+			send("fling creator quicken at " .. target.name)
+		end	
+	elseif type == "impatienceblast" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " blast")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name.. " blast")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " blast")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " blast")
+		end	
+	elseif type == "impatiencestrengthen" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor quicken at " .. target.name .. " strengthen")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant quicken at " .. target.name .. " strenghten")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice quicken at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon quicken at " .. target.name .. " heroism strengthen")
+		else
+			Unleash("affliction")
+			send("fling creator quicken at " .. target.name .. " strengthen")
+		end	
+	elseif type == "vertigo" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name .. " strengthen")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism")
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name)
+		end	
+	elseif type == "epilepsy" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name)
+		end	
+	elseif type == "epilepsyduplicate" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor flash at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice flash at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon flash at " .. target.name .. " heroism duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator flash at " .. target.name .. " duplicate")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulwrackduplicate" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor soulwrack at " .. target.name .. " duplicate")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulwrack at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice soulwrack at " .. target.name .. " duplicate")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulwrack at " .. target.name .. " heroism duplicate")
+		else
+			Unleash("affliction")
+			send("fling creator soulwrack at " .. target.name .. " duplicate")
+		end	
+	elseif type == "vertigointensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor disorient at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant disorient at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice disorient at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon disorient at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator disorient at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinationsintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor fever at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice fever at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon fever at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator fever at " .. target.name .. " intensify")
+		end	
+	elseif type == "hallucinations" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor fever at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant fever at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice fever at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon fever at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator fever at " .. target.name)
+		end	
+	elseif type == "deafintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice nervewrack at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon nervewrack at " .. target.name .. " heroism intensify")
+		else
+			send("fling creator neverwrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deafintensifycreator" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor nervewrack at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant nervewrack at " .. target.name .." intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice nervewrack at " .. target.name.. " intensify")
+		else
+			send("fling creator nervewrack at " .. target.name .. " intensify")
+		end	
+	elseif type == "deaf" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor nervewrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nervewrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice nervewrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nervewrack at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator nervewrack at " .. target.name)
+		end	
+	elseif type == "heave" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant heave at " .. target.name .. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice heave at " .. target.name.. " intensify")
+			Unleash("heave")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon heave at " .. target.name .. " heroism intensify")
+			Unleash("heave")
+		else
+			send("fling creator quicken at " .. target.name .. " intensify")
+			Unleash("heave")
+		end	
+	elseif type == "heaveho" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor heave at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant heave at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")		
+			send("fling justice heave at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon heave at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator heave at " .. target.name)
+		end	
+	elseif type == "soulburn" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor soulburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant soulburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then
+			Unleash("affliction")
+			send("fling justice soulburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon soulburn at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator soulburn at " .. target.name)
+		end	
+	elseif type == "healthleech" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name)
+		end	
+	elseif type == "healthleechintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor dehydrate at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice dehydrate at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+  			Unleash("affliction")
+			send("fling moon dehydrate at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator dehydrate at " .. target.name .. " intensify")
+		end	
+	elseif type == "nerveburn" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name)
+		end	
+	elseif type == "nerveburnintensify" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor nerveburn at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant nerveburn at " .. target.name .. " intensify")
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice nerveburn at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon nerveburn at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator nerveburn at " .. target.name .. " intensify")
+		end	
+	elseif type == "asthma" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			Unleash("affliction")
+			send("fling emperor combustion at " .. target.name .. " intensify")
+		elseif target.hierophant == false and hierophantmode == true then		
+			Unleash("affliction")
+			send("fling hierophant combustion at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			Unleash("affliction")
+			send("fling justice combustion at " .. target.name.. " intensify")
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			Unleash("affliction")
+			send("fling moon combustion at " .. target.name .. " heroism intensify")
+		else
+			Unleash("affliction")
+			send("fling creator combustion at " .. target.name .. " intensify")
+		end	
+	elseif type == "soulwrack" then
+		if (not table.contains(target.afflictions, "numbness"))  then
+			send("fling emperor soulwrack at " .. target.name)
+		elseif target.hierophant == false and hierophantmode == true then		
+			send("fling hierophant soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "justice")) then		
+			send("fling justice soulwrack at " .. target.name)
+		elseif (not table.contains(target.afflictions, "heroism")) and heroism == true then
+			send("fling moon soulwrack at " .. target.name .. " heroism")
+		else
+			send("fling creator soulwrack at " .. target.name)
+		end	
+	elseif type == "soulburnblast" then
+		send("invoke soulburn " .. target.name .. " blast")
+	end
 end
   ```
   
