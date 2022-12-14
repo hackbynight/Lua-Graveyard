@@ -1,5 +1,5 @@
 # eleusian-artificial-intelligence
-Collection of LUA/C automation scripts used with MUDLET
+Collection of LUA/C automation scripts used with MUDLET. Everything here is pulled from larger private repo to share with friends
 
 
 <details>
