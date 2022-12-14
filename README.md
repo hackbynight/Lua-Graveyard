@@ -70,7 +70,7 @@ end
 <details>
   <summary>Modified Curing Skeleton</summary>
   
-  Original (2011-2014) Credit to Vadim Peretokin (hey Vadi)
+  Original (2011-2014) Credit to Vadim Peretokin, 2015+ lots of us
   
   ```lua
   svo = svo or {}; svo.loader = svo.loader or {}
