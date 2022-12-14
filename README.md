@@ -19,7 +19,7 @@ Collection of LUA/C automation scripts used with MUDLET
       if rurl == url then display(r) else return true end
     end, true)
 
-  local url = "https://discordapp.com/api/webhooks/975391849319641161/xVtJk-By84k1Tm9yR3Or8bdMepMInRSufOuVlkxcByX_IEK7rPHvjClFa0zMArSAah7j"
+  local url = "https://discordapp.com/api/webhooks/[put yours"
   local data = {
     username = discord_username, 
     avatar_url = avatarurl,
