@@ -1,6 +1,5 @@
 # eleusian-artificial-intelligence
-Collection of LUA/C automation scripts used with MUDLET. Everything here is pulled from larger private repo to share with friends
-
+A few LUA scripts used with MUDLET to share with friends. 
 
 <details>
   <summary>Discord Web Hook</summary>
