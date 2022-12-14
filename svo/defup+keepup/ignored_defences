@@ -1,0 +1,12 @@
+return {{[ [[harmonics]] ] = {2},[ [[voicecraft]] ] = {3},[ [[general]] ] = {4},[ [[dragoncraft]] ] = {5},[ [[swashbuckling]] ] = {6},},
+{[ [[status]] ] = false,[ [[t]] ] = {7},},
+{[ [[status]] ] = false,[ [[t]] ] = {8},},
+{[ [[status]] ] = false,[ [[t]] ] = {9},},
+{[ [[status]] ] = false,[ [[t]] ] = {10},},
+{[ [[status]] ] = false,[ [[t]] ] = {11},},
+{[ [[lament]] ] = false,[ [[reel]] ] = false,[ [[bagatelle]] ] = false,[ [[hallelujah]] ] = false,[ [[berceuse]] ] = false,[ [[gigue]] ] = false,[ [[harmonius]] ] = false,[ [[wassail]] ] = false,[ [[canticle]] ] = false,[ [[contradanse]] ] = false,[ [[partita]] ] = false,[ [[anthem]] ] = false,[ [[paxmusicalis]] ] = false,[ [[continuo]] ] = false,},
+{[ [[tune]] ] = false,[ [[aria]] ] = false,[ [[lay]] ] = false,[ [[songbird]] ] = false,},
+{[ [[telesense]] ] = false,[ [[deaf]] ] = false,[ [[sileris]] ] = false,[ [[shield]] ] = false,[ [[clinging]] ] = false,[ [[alertness]] ] = false,[ [[frost]] ] = false,[ [[skywatch]] ] = false,[ [[block]] ] = false,[ [[selfishness]] ] = false,[ [[curseward]] ] = false,[ [[mindseye]] ] = false,[ [[breath]] ] = false,[ [[caloric]] ] = false,[ [[thirdeye]] ] = false,[ [[fireresist]] ] = false,[ [[lyre]] ] = false,[ [[meditate]] ] = false,[ [[waterbubble]] ] = false,[ [[magicresist]] ] = false,[ [[insomnia]] ] = false,[ [[metawake]] ] = false,[ [[treewatch]] ] = false,[ [[mass]] ] = false,[ [[coldresist]] ] = false,[ [[riding]] ] = false,[ [[cloak]] ] = false,[ [[electricresist]] ] = false,[ [[levitation]] ] = false,[ [[blind]] ] = false,[ [[bell]] ] = false,[ [[speed]] ] = false,[ [[satiation]] ] = false,[ [[rebounding]] ] = false,[ [[nightsight]] ] = false,[ [[deathsight]] ] = false,[ [[myrrh]] ] = false,[ [[kola]] ] = false,[ [[vigilance]] ] = false,[ [[groundwatch]] ] = false,[ [[hypersight]] ] = false,[ [[softfocus]] ] = false,[ [[venom]] ] = false,},
+{[ [[dragonarmour]] ] = false,[ [[dragonform]] ] = false,[ [[dragonbreath]] ] = false,},
+{[ [[balancing]] ] = false,[ [[heartsfury]] ] = false,[ [[drunkensailor]] ] = false,[ [[grip]] ] = false,[ [[arrowcatch]] ] = false,[ [[acrobatics]] ] = false,[ [[dodging]] ] = false,},
+}

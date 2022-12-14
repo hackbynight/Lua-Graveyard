@@ -1,0 +1,5 @@
+return {{[ [[parry_actionlevel]] ] = {2},[ [[priority]] ] = {3},[ [[parry_shouldbe]] ] = {4},[ [[parry]] ] = [[lasthit]],},
+{},
+{[1] = [[torso]],[2] = [[head]],[3] = [[right leg]],[4] = [[left leg]],[5] = [[left arm]],[6] = [[right arm]],},
+{[ [[left leg]] ] = false,[ [[head]] ] = true,[ [[right arm]] ] = false,[ [[torso]] ] = false,[ [[right leg]] ] = false,[ [[left arm]] ] = false,},
+}
