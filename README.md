@@ -65,6 +65,8 @@ end
   
 </details>
 
+next three are vadi's svof that fit our mudlet profile (his license is in-code)
+
 <details>
   <summary>Vadim's (SVOF) Do, Or</summary>
   
@@ -4396,7 +4398,7 @@ if svo.systemloaded then svo.loader.action() end
   
 </details>
 
-------------------- END OF CORE      --------------------
+---------------------------------------
 
 <details>
   <summary>Initialization on Boot</summary>
