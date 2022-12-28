@@ -68,7 +68,7 @@ end
 next three are vadi's svof that fit our mudlet profile (his license is in-code)
 
 <details>
-  <summary>Vadim's (SVOF) Do, Or</summary>
+  <summary>Do, Or</summary>
   
   ```lua
   -- Svof (c) 2011-2018 by Vadim Peretokin
