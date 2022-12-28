@@ -65,7 +65,7 @@ end
   
 </details>
 
-next three were originally vadis svof objects that are modified to fit our mudlet profile (his license is in-code)
+next three were originally vadis svof objects that fit our own mudlet profile (his license is in-code)
 
 <details>
   <summary>Do, Or</summary>
