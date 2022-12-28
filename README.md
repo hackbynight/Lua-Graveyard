@@ -6130,9 +6130,8 @@ $r @tar" "@pick(t,defilerQ) with thornroot</value>
 </details>
 
 <details>
-  <summary>Iniar's Doblinker</summary>
-  
-  Thanks Iniar
+  <summary>Iniars Doblinker</summary>
+
   
   ```lua
   function doblink( room, color, duration )
