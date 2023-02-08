@@ -4,6 +4,7 @@
   <summary>Discord Web Hook</summary>
   
   Basic webhook to take messages given/taken via telnet and pump it into my private discord.
+  Basic webhook to take messages given/taken via telnet and pump it into my private discord.
   
   ```lua
   function sendToDiscordWebhook(discord_username, avatarurl, message)
