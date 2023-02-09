@@ -6127,6 +6127,408 @@ $r @tar" "@pick(t,defilerQ) with thornroot</value>
   
 </details>
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Work Notes</title>
+  <style>
+  /* Add some cool styling to the page */
+  
+  body {
+    background-color: #000000;
+    color: #f8f8f2;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cropped {
+    overflow: hidden;
+    height: 65%; /* keep the top 65% */
+  }
+
+  input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #6272a4;
+    background-color: transparent;
+    color: #f8f8f2;
+    font-size: 16px;
+    width: 96%;
+    padding: 10px;
+    outline: none;
+  }
+  
+  textarea {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+    width: 98%;
+    min-height: 150px;
+    /* Make the text area big enough for at least 2 paragraphs of notes */
+  }
+  
+  button {
+    border: none;
+    background-color: #6272a4;
+    color: #f8f8f2;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  button:hover {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+  
+  .output {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .skinny {
+    max-width: 800px; /* set the maximum width to 800px */
+    margin: 0 auto; /* center the container horizontally */
+  }
+  
+  pre {
+    word-wrap: break-word;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="skinny">
+ <div class="cropped"><img src="https://media.licdn.com/dms/image/C5616AQHW09JI0bhL1w/profile-displaybackgroundimage-shrink_200_800/0/1532418603994?e=2147483647&v=beta&t=ZubS8UT7ypsCsq-UNrLcuMNDlm3aKAjf31_nbGlXYus" style="width:100%;"></div>
+  <form id="work-notes-form">
+    <label for="client">CL:</label>
+    <select id="client" name="client">
+      <option value="law-3791">law-3791</option>
+      <option value="law-2038">law-2038</option>
+      <option value="law-320">law-320</option>
+      <option value="law-310">law-310</option>
+      <option value="law-3054">law-3054</option>
+    </select>
+    <!--       </br>
+      <br> -->
+    <label for="severity">&nbsp&nbsp SV:</label>
+    <select id="severity" name="severity">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low" selected>Low</option>
+      <option value="Informational">Info</option>
+      <option value="None">None</option>
+    </select>
+    <label for="reason">&nbsp&nbsp CR:</label>
+    <select id="reason" name="reason">
+      <option value="Benign Positive">Benign</option>
+      <option value="True Positive">True</option>
+      <option value="False Positive">False</option>
+    </select>
+    <label for="status">&nbsp&nbsp ST:</label>
+    <select id="status" name="status">
+      <option value="Assigned">Assigned</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Waiting for Customer">Waiting</option>
+      <option value="On Hold">On Hold</option>
+    </select>
+    </br>
+    <br>
+    <br>
+    <label for="inc">Incident ID #:</label>
+    </br>
+    <input type="text" id="inc" name="inc" placeholder="Enter alert incident INC number. [$inc]"> </br>
+    <label for="description">Alert Description:</label>
+    </br>
+    <input type="text" id="description" name="description" placeholder="Enter alert description associated with INC. [$description]"> </br>
+    <label for="users">Users:</label>
+    </br>
+    <input type="text" id="users" name="users" placeholder="Enter multiple users separated by a comma. [$user]"> </br>
+    <label for="ips">IP Addresses:</label>
+    </br>
+    <input type="text" id="ips" name="ips" placeholder="Enter multiple IPs separated by a comma. [$ip]">
+    </br>
+    <label for="devices">Devices:</label>
+    </br>
+    <input type="text" id="devices" name="devices" placeholder="Enter relevant devices separated by a comma. [$device]">
+    </br>
+    <label for="agents">User Agents:</label>
+    </br>
+    <input type="text" id="agents" name="agents" placeholder="Enter UserAgents (i.e. browser) separated by a comma. [$agent]">
+    </br>
+    <label for="hashes">File Hashes:</label>
+    </br>
+    <input type="text" id="hashes" name="hashes" placeholder="Enter hashes separated by a comma. [$hash]">
+    </br>
+    <label for="files">.Exe's and Apps:</label>
+    </br>
+    <input type="text" id="files" name="files" placeholder="Enter involved files and applications separated by a comma. [$file]">
+    </br>
+    <label for="paths">URLS and Directories:</label>
+    </br>
+    <input type="text" id="paths" name="paths" placeholder="Enter URLs or directories separated by a comma. [$path]">
+    </br>
+    <label for="locations">Geo-Location:</label>
+    </br>
+    <input type="text" id="locations" name="locations" placeholder="Enter interesting geoLocations separated by a comma. [$location]">
+    </br>
+    <label for="custom">Custom:</label>
+    </br>
+    <input type="text" id="custom" name="custom" placeholder="Enter a custom variable. [$custom]">
+    <br><br><div style="text-align: center;">Select an Optional Template</div>
+    <br>
+<div style="display: flex;">
+  <select id="dropdown">
+    <option id="generalAlert" value="General Alert">General Alert</option>
+    <option id="MFAFailure" value="MFA Failure">MFA prompt was rejected by a user from a previously unseen IP address</option>
+    <option id="NewUserAgent" value="New UserAgent">New UserAgent</option>
+    <option id="RDPCOnnection" value="RDP Connection">RDP Connection</option>
+    <option id="MountedDevice" value="Mounted ISO/USB/VM">Mounted ISO/USB/VM</option>
+    <option id="UnfamiliarSignin" value="Unfamiliar Signin Properties">Unfamiliar Signin Properties</option>
+    <option id="BruteForce" value="Brute Force">Brute Force</option>
+    <option id="AuthFailureSuccess" value="Auth Failure then Success">Auth Failure then Success</option>
+    <option id="SharePointFileOp" value="Share Point File Operation">Share Point File Operation</option>
+    <option id="ImpossibleTravel" value="Impossible Travel">Impossible Travel</option>
+    <option id="PhishingEvent" value="Phishing Event">Phishing Event</option>
+    <option id="SSLVPN" value="SSL VPN">SSL VPN</option>
+    <option id="MalwareEvent" value="Malware Event">Malware Event</option>
+    <option id="PasswordSpraying" value="Password Spraying">Password Spraying</option>
+    <option id="DKDLogin" value="DKD Login">DKD Login</option>
+    <option id="ThreatIndicator" value="Threat Indicator">Threat Indicator</option>
+    <option id="AnalyticRuleChange" value="Analytic Rule Change">Analytic Rule Change</option>
+    <option id="ADConnect" value="AD Connect">AD Connect</option>
+  </select>
+
+  <br><br>
+</div>
+
+    <div style="font-size:13px; color:grey; text-align: center;"><br>
+      <br> Example: Alert triggered because $description. $inc was automatically created on $date. User $user2 rejected multi-factor authentication prompt from the unseen IP $ip1. A $severity security risk has been identified. Closed as $reason. </div>
+    <br>
+    <div id="output" style="display: flex; align-items: center; justify-content: center; text-align: center; color: green"></div>
+    <br>
+    <div style="display: flex; align-items: center; justify-content: center;">
+    <button type="submit">Submit</button>&nbsp&nbsp&nbsp&nbsp
+    <button id="teams-btn">Send to Teams</button>&nbsp&nbsp&nbsp&nbsp
+    <button id="clear-btn">Clear</button>
+  </div>
+  <br>
+    <label for="notes"></label>
+    <textarea id="notes" name="notes" placeholder="Enter your analysis here. To use the variables set from the entity fields, see the naming convention in the Example above. Multiple of the same variable works like such, $user1 will be the first user given above while $user2 will be the second."></textarea>
+    </br>
+  </form>
+  </br>
+  <div>
+  </div>
+    
+    <script>
+    const clearBtn = document.querySelector('#clear-btn');
+    const inputs = document.querySelectorAll('input');
+    clearBtn.addEventListener('click', function() {
+      inputs.forEach(input => {
+        input.value = '';
+      });
+    });
+    let today = new Date();
+    var date = today.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+document.getElementById("dropdown").addEventListener("change", function() {
+  var description = document.getElementById("dropdown").value;
+  var date = new Date();
+  var inc = Math.floor(Math.random() * 100000);
+  var severity = "high";
+  var reason = "false alarm";
+
+  switch (description) {
+    case "General Alert":
+      severity = "low";
+      reason = "manual review";
+      break;
+    case "MFA Failure":
+      severity = "medium";
+      reason = "successful MFA after multiple attempts";
+      break;
+    case "New UserAgent":
+      severity = "medium";
+      reason = "user logging in from a new device";
+      break;
+    case "RDP Connection":
+      severity = "high";
+      reason = "suspicious RDP activity";
+      break;
+    case "Mounted ISO/USB/VM":
+      severity = "high";
+      reason = "USB or ISO device mounted";
+      break;
+    case "Unfamiliar Signin Properties":
+      severity = "medium";
+      reason = "user logging in from an unfamiliar location";
+      break;
+    case "Brute Force":
+      severity = "high";
+      reason = "blocked after multiple failed login attempts";
+      break;
+    case "Auth Failure then Success":
+      severity = "medium";
+      reason = "successful login after multiple failed attempts";
+      break;
+    case "Share Point File Operation":
+      severity = "medium";
+      reason = "suspicious file operation detected";
+      break;
+    case "Impossible Travel":
+      severity = "high";
+      reason = "user logged in from two different locations at the same time";
+      break;
+    case "Phishing Event":
+      severity = "high";
+      reason = "phishing attempt detected";
+      break;
+    case "SSL VPN":
+      severity = "low";
+      reason = "VPN connection established";
+      break;
+    case "Malware Event":
+      severity = "high";
+      reason = "malware detected";
+      break;
+    case "Password Spraying":
+      severity = "high";
+      reason = "blocked after multiple failed login attempts";
+      break;
+    case "DKD Login":
+      severity = "medium";
+      reason = "login from a new device";
+      break;
+    case "Threat Indicator":
+      severity = "high";
+      reason = "indicator of compromise detected";
+      break;
+    case "Analytic Rule Change":
+      severity = "low";
+      reason = "change in analytic rule";
+      break;
+    case "AD Connect":
+      severity = "low";
+      reason = "AD Connect connection established";
+      break;
+    default:
+      severity = "unknown";
+      reason = "unknown";
+  }
+
+  document.getElementById("notes").value = "Alert triggered because " + description + " INC-" + inc + " was automatically created on " + date + ". A " + severity + " risk has been assessed. Closed as " + reason + ".";
+});
+
+    document.getElementById("work-notes-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Get the values of agents, users, ips, devices, hashes, and files
+      var client = document.getElementById("client").value;
+      var severity = document.getElementById("severity").value;
+      var inc = document.getElementById("inc").value;
+      var description = document.getElementById("description").value;
+      var users = document.getElementById("users").value;
+      var ips = document.getElementById("ips").value;
+      var devices = document.getElementById("devices").value;
+      var agents = document.getElementById("agents").value;
+      var hashes = document.getElementById("hashes").value;
+      var files = document.getElementById("files").value;
+      var paths = document.getElementById("paths").value;
+      var locations = document.getElementById("locations").value;
+      var notes = document.getElementById("notes").value;
+      var reason = document.getElementById("reason").value;
+      // Replace all instances of $agent1, $agent2, etc. in the notes with the corresponding agent value
+      var agentList = agents.split(",");
+      for(var i = 0; i < agentList.length; i++) {
+        var agentPlaceholder = "$agent" + (i + 1);
+        notes = notes.replace(agentPlaceholder, agentList[i]);
+      }
+      // Replace all instances of $user1, $user2, etc. in the notes with the corresponding user value
+      var userList = users.split(",");
+      for(var i = 0; i < userList.length; i++) {
+        var userPlaceholder = "$user" + (i + 1);
+        notes = notes.replace(userPlaceholder, userList[i]);
+      }
+      // Replace all instances of $ip1, $ip2, etc. in the notes with the corresponding ip value
+      var ipList = ips.split(",");
+      for(var i = 0; i < ipList.length; i++) {
+        var ipPlaceholder = "$ip" + (i + 1);
+        notes = notes.replace(ipPlaceholder, ipList[i]);
+      }
+      // Replace all instances of $device1, $device2, etc. in the notes with the corresponding device value
+      var deviceList = devices.split(",");
+      for(var i = 0; i < deviceList.length; i++) {
+        var devicePlaceholder = "$device" + (i + 1);
+        notes = notes.replace(devicePlaceholder, deviceList[i]);
+      }
+      // Replace all instances of $hash1, $hash2, etc. in the notes with the corresponding hash value
+      var hashList = hashes.split(",");
+      for(var i = 0; i < hashList.length; i++) {
+        var hashPlaceholder = "$hash" + (i + 1);
+        notes = notes.replace(hashPlaceholder, hashList[i]);
+      }
+      // Replace all instances of $file1, $file2, etc. in the notes with the corresponding file value
+      var fileList = files.split(",");
+      for(var i = 0; i < fileList.length; i++) {
+        var filePlaceholder = "$file" + (i + 1);
+        notes = notes.replace(filePlaceholder, fileList[i]);
+      }
+      // Replace all instances of $path1, $path2, etc. in the notes with the corresponding path value
+      var pathList = paths.split(",");
+      for(var i = 0; i < pathList.length; i++) {
+        var pathPlaceholder = "$path" + (i + 1);
+        notes = notes.replace(pathPlaceholder, pathList[i]);
+      }
+      // Replace all instances of $location1, $location2, etc. in the notes with the corresponding location value
+      var locationList = locations.split(",");
+      for(var i = 0; i < locationList.length; i++) {
+        var locationPlaceholder = "$location" + (i + 1);
+        notes = notes.replace(locationPlaceholder, locationList[i]);
+      }
+      // Replace all instances of $reason in the notes with the reason value
+      notes = notes.replace("$reason", reason);
+      // Replace all instances of $client in the notes with the selected client
+      notes = notes.replace("$client", client);
+      // Replace all instances of $reason in the notes with the selected reason
+      notes = notes.replace("$reason", reason);
+      // Replace all instances of $path in the notes with the selected path
+      notes = notes.replace("$date", date);
+      // Replace all instances of description in the notes with the selected description
+      notes = notes.replace("$description", description);
+      // Replace all instances of $severity in the notes with the selected severity
+      notes = notes.replace("$severity", severity);
+      // Replace all instances of $inc in the notes with the entered incident ID
+      notes = notes.replace("$inc", inc);
+      // Log the final value of notes
+      // Display the output
+      document.getElementById("output").innerHTML = notes;
+
+      // const dropdown = document.getElementById("dropdown");
+      // options.forEach(function(option) {
+      // const el = document.createElement("option");
+      // el.value = option;
+      // el.textContent = option;
+      // dropdown.appendChild(el);
+    });
+    </script>
+  </body>
+</html>
+
 <details>
   <summary>Iniars Doblinker</summary>
 
