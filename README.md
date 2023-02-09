@@ -70,7 +70,7 @@ end
   <summary>Do, Or</summary>
   
   ```lua
-  -- Svof (c) 2011-2018 by Vadim Peretokin
+  -- Original (2011-2014) Credit to Vadim Peretokin, 2014+ lots of us. Vadi's license below
 
 -- Svof is licensed under a
 -- Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
