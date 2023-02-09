@@ -66,8 +66,6 @@ end
   
 </details>
 
-next three were originally vadi's (SVOF) that fit our own mudlet profile (his license is in-code)
-
 <details>
   <summary>Do, Or</summary>
   
