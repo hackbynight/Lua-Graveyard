@@ -1,3 +1,6 @@
+See files for projects, files, and heads - see below for a ~~collection~~ unorganized dump of LUA scripts.
+
+
 # A few LUA scripts to share with friends. 
 
 
